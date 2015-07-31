@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MMSound" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HYy-6a-Eo0">
+                                <rect key="frame" x="16" y="90" width="568" height="440"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3h2-ml-HVn"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kRY-yZ-WS1"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnB-F2-8op">
+                                <rect key="frame" x="463" y="538" width="121" height="42"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                <state key="normal" title="Help Me!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="helpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNM-qC-QN5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MaKey MaKey Sound Board" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUN-To-aB6">
+                                <rect key="frame" x="62" y="20" width="499" height="50"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDO-gv-kia">
+                                <rect key="frame" x="16" y="538" width="121" height="42"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="25"/>
+                                <state key="normal" title="Keyboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFY-AK-yMm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-cc-BOT">
+                                <rect key="frame" x="195" y="544" width="60" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="21"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AaA-xF-aUZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXg-Jk-XAJ">
+                                <rect key="frame" x="345" y="544" width="60" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="21"/>
+                                <state key="normal" title="Load">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBu-4g-Fja"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eXg-Jk-XAJ" secondAttribute="bottom" constant="26" id="2oW-Z0-8cC"/>
+                            <constraint firstItem="HYy-6a-Eo0" firstAttribute="top" secondItem="aUN-To-aB6" secondAttribute="bottom" constant="20" id="Cbb-ae-gk5"/>
+                            <constraint firstItem="vnB-F2-8op" firstAttribute="leading" secondItem="eXg-Jk-XAJ" secondAttribute="trailing" constant="58" id="IQ7-9g-Zlq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aUN-To-aB6" secondAttribute="trailing" constant="45" id="K1h-vg-W3c"/>
+                            <constraint firstItem="HYy-6a-Eo0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mz6-EZ-aRk"/>
+                            <constraint firstItem="vnB-F2-8op" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ruy-LE-9gD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jkv-cc-BOT" secondAttribute="bottom" constant="26" id="WBd-aN-wFb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vnB-F2-8op" secondAttribute="bottom" constant="20" id="bUU-rq-40J"/>
+                            <constraint firstItem="aUN-To-aB6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eHs-mY-SEQ"/>
+                            <constraint firstItem="FDO-gv-kia" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l9h-na-8qS"/>
+                            <constraint firstItem="HYy-6a-Eo0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mmq-te-tch"/>
+                            <constraint firstItem="vnB-F2-8op" firstAttribute="top" secondItem="HYy-6a-Eo0" secondAttribute="bottom" constant="8" id="oeb-0s-ylO"/>
+                            <constraint firstItem="jkv-cc-BOT" firstAttribute="leading" secondItem="FDO-gv-kia" secondAttribute="trailing" constant="58" id="p5p-zf-vBi"/>
+                            <constraint firstItem="aUN-To-aB6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="46" id="voC-0g-99p"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FDO-gv-kia" secondAttribute="bottom" constant="20" id="xMA-EN-vsp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="helpButton" destination="vnB-F2-8op" id="ofw-Cj-yz8"/>
+                        <outlet property="tableView" destination="HYy-6a-Eo0" id="8FR-6Q-qHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
